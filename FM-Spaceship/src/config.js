@@ -6,16 +6,16 @@ var config = {
     parent: 'phaser-example',
     width: 800,
     height: 600,
-    autoCenter: true,
-    scene: GameScene,
     pixelArt:true,
+    autoCenter: true,
     physics: {
       default: 'arcade',
       arcade:{
         debug: false,
         gravity: {y: 20}
       }
-    }
+    },
+    scene: GameScene
 };
 
 export { config };
