@@ -41,6 +41,8 @@ class GameScene extends Scene {
     this.load.audio('petrolSound','assets/petrolSound.mp3');
     this.load.audio('gameOver','assets/GameOver.mp3');
 
+    this.scale.pageAlignHorizontally = true;
+
   }
 
   // =====================================
