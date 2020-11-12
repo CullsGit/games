@@ -5,6 +5,9 @@ window.onload = function() {
     height: 800,
     pixelArt: true,
     autoCenter: true,
+
+
+
     physics: {
         default: 'arcade',
         arcade: {
