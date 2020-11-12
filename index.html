@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>8 Ball Pool</title>
+    <meta charset="utf-8">
+    <link href="lib/style.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="lib/system.js"></script>
+</head>
+<body>
+
+  <div class="nameinputs">
+    <h1>Enter your Player Names!</h1>
+    <form id="myForm">
+      <label>Player 1:</label>
+  <input type="text" id="name1">
+    <label>Player 2:</label>
+  <input type="text" id="name2">
+  <button>Play!</button>
+  </form>
+
+<div id="game"></div>
+
+<script type="text/javascript">
+
+    System.import('lib/phaser.js').then(function(){
+        System.import('game.js');
+    });
+
+</script>
+  </div>
+<script src="jquery.js"></script>
+
+
+</body>
+</head>
