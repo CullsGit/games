@@ -13,7 +13,7 @@ class GameScene extends Scene {
     preload() {
 
         //preload audio 
-        // this.load.audio('hype','assets/megaman.mp3');
+        this.load.audio('hype','assets/megaman.mp3');
        
     // preloaded images and sprites ===============================================
     this.load.image('dirt', 'assets/dirt.png');
@@ -40,17 +40,17 @@ class GameScene extends Scene {
     
         const backgroundImage = this.add.image(400, 300, 'background');
 
-        // this.hype = this.sound.add('hype');
-        // var musicConfig = {
-        // mute: false,
-        // volume: .4,
-        // rate: 1,
-        // detune: 0,
-        // seek: 0,
-        // loop: true,
-        // delay: 0
-        // }
-        // this.hype.play(musicConfig)
+        this.hype = this.sound.add('hype');
+        var musicConfig = {
+        mute: false,
+        volume: .2,
+        rate: 1,
+        detune: 0,
+        seek: 0,
+        loop: true,
+        delay: 0
+        }
+        this.hype.play(musicConfig)
 
         this.createPlayer()
         this.createPlatforms()
@@ -147,7 +147,7 @@ this.platforms.create(580, 697,'dirt').setScale(.5).refreshBody()
         this.platforms.create(258, 485,'grass')
         this.platforms.create(260, 549,'dirt')
         this.platforms.create(322, 549,'dirt')
-        this.platforms.create(362, 571,'grass').setScale(.3).refreshBody()
+        this.platforms.create(362, 565,'grass').setScale(.3).refreshBody()
         
 // floor level ================================================================
         this.platforms.create(170,770,'brick')
