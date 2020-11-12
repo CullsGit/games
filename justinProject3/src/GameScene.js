@@ -1,7 +1,6 @@
 import { Scene } from 'phaser'
 
 
-
 class GameScene extends Scene {
     constructor() {
         super()
@@ -43,7 +42,7 @@ class GameScene extends Scene {
         this.hype = this.sound.add('hype');
         var musicConfig = {
         mute: false,
-        volume: .2,
+        volume: .1,
         rate: 1,
         detune: 0,
         seek: 0,
@@ -147,7 +146,7 @@ this.platforms.create(580, 697,'dirt').setScale(.5).refreshBody()
         this.platforms.create(258, 485,'grass')
         this.platforms.create(260, 549,'dirt')
         this.platforms.create(322, 549,'dirt')
-        this.platforms.create(362, 565,'grass').setScale(.3).refreshBody()
+        this.platforms.create(362, 570,'grass').setScale(.3).refreshBody()
         
 // floor level ================================================================
         this.platforms.create(170,770,'brick')
