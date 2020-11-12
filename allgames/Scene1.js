@@ -15,6 +15,7 @@ class Scene1 extends Phaser.Scene {
     this.load.tilemapTiledJSON('map', 'assets/maptile/other.json')
     this.load.audio( 'ghost', 'assets/ghost_town.mp3')
 
+    this.scale.pageAlignHorizontally = true;
 
   }
 
@@ -29,6 +30,8 @@ class Scene1 extends Phaser.Scene {
     this.hero = this.physics.add.sprite(640, 300, 'hero', 0);
     this.sfx = this.sound.add('ghost');
     this.sfx.play();
+
+
 
 
 
