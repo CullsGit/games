@@ -1,0 +1,51 @@
+body {
+    background-color: #1c5366;
+    font-family: 'Press Start 2P', cursive;
+}
+
+canvas {
+    border: 10px solid #6fa9bd;
+}
+
+a {
+    font-family: sans-serif;
+    color: white;
+}
+
+.nameinputs {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 20px;
+
+}
+
+form {
+  display: flex;
+    justify-content: center;
+  align-items: center;
+  align-content: center;
+
+
+
+}
+
+input {
+  margin: 10px;
+   box-shadow: 2px 5px;
+   color: red;
+}
+
+
+h1 {
+text-align: center;
+color: white;
+}
+
+label {
+  color: white;
+}
