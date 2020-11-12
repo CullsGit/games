@@ -47,6 +47,7 @@ class GameScene extends Scene {
     this.load.audio('sfx','assets/shinobi.mp3');
     this.load.audio('gameOver','assets/gameover.mp3');
 
+    this.scale.pageAlignHorizontally = true;
     this.cursors = this.input.keyboard.createCursorKeys();
   }
 
@@ -384,7 +385,7 @@ class GameScene extends Scene {
 
         this.upKeyDown = false;
       }
-      
+
       this.score += 1/60;
       this.scoreText.setText(`Score: ${ Math.floor(this.score) }`)
       this.scoreText.x = 15;
