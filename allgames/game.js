@@ -4,6 +4,10 @@ window.onload = function() {
     width: 1280,
     height: 800,
     pixelArt: true,
+    autoCenter: true,
+
+
+
     physics: {
         default: 'arcade',
         arcade: {
@@ -17,4 +21,5 @@ window.onload = function() {
 
 
   const game = new Phaser.Game(config);
+
 };

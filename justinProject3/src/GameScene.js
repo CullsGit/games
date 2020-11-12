@@ -1,13 +1,12 @@
 import { Scene } from 'phaser'
 
 
-
 class GameScene extends Scene {
     constructor() {
-        super()
+        super('game')
 
         this.gameOver = false
-        this.gameWin
+        this.gameWin = false
     }
 
     preload() {
@@ -47,7 +46,7 @@ class GameScene extends Scene {
         rate: 1,
         detune: 0,
         seek: 0,
-        loop: true,
+        loop: false,
         delay: 0
         }
         this.hype.play(musicConfig)
@@ -58,10 +57,10 @@ class GameScene extends Scene {
         this.createSpikes()
         this.createWin()
 
-        this.gameOverText = this.add.text(280, 200, 'Game Over', {fontSize: '64px', fill: '#000'});
+        this.gameOverText = this.add.text(280, 200, 'Game Over Click to play again', {fontSize: '32px', fill: '#000'}).setOrigin(.25);
         this.gameOverText.visible = false
 
-        this.gameWinText = this.add.text(280, 200, 'You Win', {fontSize: '64px', fill: '#000'});
+        this.gameWinText = this.add.text(280, 200, 'You Win Click Again to play', {fontSize: '32px', fill: '#000'}).setOrigin(.25);
         this.gameWinText.visible = false
 
     }
@@ -147,7 +146,7 @@ this.platforms.create(580, 697,'dirt').setScale(.5).refreshBody()
         this.platforms.create(258, 485,'grass')
         this.platforms.create(260, 549,'dirt')
         this.platforms.create(322, 549,'dirt')
-        this.platforms.create(362, 565,'grass').setScale(.3).refreshBody()
+        this.platforms.create(362, 570,'grass').setScale(.3).refreshBody()
         
 // floor level ================================================================
         this.platforms.create(170,770,'brick')
@@ -280,6 +279,7 @@ this.platforms.create(580, 697,'dirt').setScale(.5).refreshBody()
             this.spikes.create(297, 21,'spikeflip').setScale(.3).refreshBody()
             this.spikes.create(281, 21,'spikeflip').setScale(.3).refreshBody()
             this.spikes.create(435, 71,'spike').setScale(.3).refreshBody()
+            this.spikes.create(235, 71,'spike').setScale(.3).refreshBody()
 
        }
 //  hit spikes and die 
@@ -288,15 +288,18 @@ this.platforms.create(580, 697,'dirt').setScale(.5).refreshBody()
         player.setTint('#d13048');
         this.gameOver = true;
         this.gameOverText.visible = true
-
+        this.input.on('pointerdown', () => this.scene.start('preload'))
+        this.hype.pause()
        }
 // Win Function ======================================================
        createWin() {
         this.wins = this.physics.add.staticGroup();
             this.physics.add.collider(this.wins, this.platforms);
             this.physics.add.collider(this.player, this.wins, this.hitTrophy, null, this)
-
             this.wins.create(50, 60,'end')
+            
+
+
 
        }
 // Hit trophy and win ==================================================
@@ -305,7 +308,8 @@ this.platforms.create(580, 697,'dirt').setScale(.5).refreshBody()
         player.setTint('#d13048');
         this.gameWin = true;
         this.gameWinText.visible = true
-
+        this.input.on('pointerdown', () => this.scene.start('preload'))
+            this.hype.pause()
        }
 
        update() {  
