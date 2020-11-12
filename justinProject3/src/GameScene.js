@@ -297,8 +297,7 @@ this.platforms.create(580, 697,'dirt').setScale(.5).refreshBody()
             this.physics.add.collider(this.wins, this.platforms);
             this.physics.add.collider(this.player, this.wins, this.hitTrophy, null, this)
             this.wins.create(50, 60,'end')
-            this.input.on('pointerdown', () => this.scene.start('preload'))
-            this.hype.pause()
+            
 
 
 
@@ -309,7 +308,8 @@ this.platforms.create(580, 697,'dirt').setScale(.5).refreshBody()
         player.setTint('#d13048');
         this.gameWin = true;
         this.gameWinText.visible = true
-
+        this.input.on('pointerdown', () => this.scene.start('preload'))
+            this.hype.pause()
        }
 
        update() {  
