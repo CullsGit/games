@@ -5,12 +5,12 @@ const config = {
     type: Phaser.AUTO,
     parent: 'phaser-example',
     width: 800,
-    height: 600,
+    height: 800,
     scene: GameScene,
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 300 },
+            gravity: { y: 700 },
             debug: true
         }
     },
