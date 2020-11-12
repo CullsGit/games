@@ -20,12 +20,12 @@ engineering immersive course of GA (General Assembly) Sydney.
 
 ## Making the game steps
 
-1. Config.js
+## Config.js
 
 ### config
 * Define the configuration of the game: width and height of the canvas, physics (arcade), and the scene.
 
-2. GameScene.js
+## GameScene.js
 ### Load
 * Loading all the images, sprite sheets, audios and defining the cursors as user can
 play the game using arrow keys.
